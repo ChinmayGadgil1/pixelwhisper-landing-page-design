@@ -1,0 +1,26 @@
+PixelWhisper v1.0.0 - Windows Installer
+========================================
+
+PLACEHOLDER FILE
+
+To create the actual Windows installer, you'll need to:
+
+1. Build the Python application into a Windows executable using PyInstaller:
+   pyinstaller --onefile --windowed pixelwhisper/__main__.py
+
+2. Create an MSI installer using tools like:
+   - WiX Toolset
+   - NSIS (Nullsoft Scriptable Install System)
+   - py2exe
+
+3. The installer should:
+   - Install to Program Files\PixelWhisper
+   - Create Start Menu shortcuts
+   - Add to PATH for command-line usage
+   - Handle dependencies (PIL/Pillow, cryptography)
+
+File names:
+- pixelwhisper-1.0.0-windows.exe (signed executable installer)
+- pixelwhisper-1.0.0-windows-portable.zip (portable version)
+
+For more details, see the project README.
