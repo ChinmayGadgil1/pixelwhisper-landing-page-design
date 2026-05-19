@@ -168,11 +168,21 @@ export default function Home() {
             </p>
 
             <div className="space-y-6">
-              <a href="/source/windows" className="inline-flex items-center justify-center w-full md:w-auto px-10 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 glow-primary group">
+              <button
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/api/download?file=SteganographyApp_Installer.zip';
+                  link.download = 'pixelwhisper-1.0.0-windows.zip';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+                className="inline-flex items-center justify-center w-full md:w-auto px-10 py-4 bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-500 hover:to-purple-600 rounded-xl font-semibold text-white transition-all duration-300 hover:scale-105 glow-primary group"
+              >
                 <Download className="mr-3" size={20} />
                 Download Windows Installer
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-              </a>
+              </button>
 
               <p className="text-sm text-white/50">Windows 10 and later. Python 3.8+ required.</p>
 
